@@ -23,7 +23,7 @@ export const Footer = () => {
           alignItems: 'center'
         }}>
         <TextField />
-        <IconButton onClick={handleMessageSubmit}>
+        <IconButton onClick={handleMessageSubmit} aria-label='send response'>
           <svg viewBox='0 0 24 24' width='24' height='24'>
             <path
               fill='white'
