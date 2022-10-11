@@ -1,0 +1,21 @@
+@import './variables';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+body {
+  color: white;
+  background-color: $theme-black;
+  height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+  overflow: hidden;
+}
