@@ -15,6 +15,7 @@ import '@fontsource/roboto/700.css';
 import createEmotionCache from '../utility/createEmotionCache';
 import lightThemeOptions from '../styles/theme/theme';
 import '../styles/globals.scss';
+import SEO from '../components/SEO';
 interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
@@ -25,7 +26,7 @@ const theme = createTheme(lightThemeOptions);
 
 const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
 
-  useEffect(() => {
+  useEffect(() => { 
     if (typeof window !== 'undefined') {
       const loader = document.getElementById('globalLoader');
       if (loader)
@@ -38,6 +39,7 @@ const MyApp: React.FunctionComponent<MyAppProps> = (props) => {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <SEO/>
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
