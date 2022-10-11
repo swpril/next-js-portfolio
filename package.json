@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npm run clean && npm run build && node ./deploy-github"
+    "deploy": "yarn build && node ./deploy-github"
   },
   "dependencies": {
     "@emotion/cache": "11.10.3",
