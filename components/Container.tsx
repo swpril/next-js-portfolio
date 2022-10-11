@@ -4,7 +4,6 @@ import { Box, styled } from '@mui/material';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
-import SwprilDP from '../assets/images/swpril.jpeg';
 import BG_IMG from '../assets/images/bg.webp';
 
 const StyledBox = styled(Box)(() => ({
@@ -13,7 +12,6 @@ const StyledBox = styled(Box)(() => ({
   background: `url(${BG_IMG.src})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
-  overflow: 'hidden',
   position: 'relative'
 }));
 

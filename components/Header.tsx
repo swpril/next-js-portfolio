@@ -37,7 +37,12 @@ export const Header = () => {
             <Box sx={{ flexGrow: 0 }}>
               <IconButton sx={{ p: 0 }} onClick={handleOpen}>
                 <Avatar>
-                  <Image src={SwprilDP} alt='Swpril Ahuja profile picture' />
+                  <Image
+                    src={SwprilDP}
+                    alt='Swpril Ahuja profile picture'
+                    width={64}
+                    height={64}
+                  />
                 </Avatar>
               </IconButton>
             </Box>
