@@ -1,8 +1,15 @@
 import * as React from 'react';
-import { AppBar, Toolbar, IconButton } from '@mui/material';
+import { AppBar, Toolbar, IconButton, styled } from '@mui/material';
 
 import { color } from '../styles/color';
-import { TextField } from './shared/TextField';
+
+const InputStyles = {
+  border: 'none !important',
+  color: 'white !important',
+  outline: 'none !important',
+  boxShadow: 'none !important',
+  backgroundColor: `${color.darkGray} !important`
+};
 
 export const Footer = () => {
   function handleMessageSubmit() {}
@@ -22,7 +29,12 @@ export const Footer = () => {
           justifyContent: 'space-evenly',
           alignItems: 'center'
         }}>
-        <TextField />
+        <input
+          type='text'
+          className='form-control'
+          placeholder='enter your response'
+          style={InputStyles}
+        />
         <IconButton onClick={handleMessageSubmit} aria-label='send response'>
           <svg viewBox='0 0 24 24' width='24' height='24'>
             <path
