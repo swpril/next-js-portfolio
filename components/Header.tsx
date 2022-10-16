@@ -47,8 +47,8 @@ export const Header = () => {
                   <Image
                     src={SwprilDP}
                     alt='Swpril Ahuja profile picture'
-                    width={40}
-                    height={40}
+                    width={96}
+                    height={120}
                   />
                 </Avatar>
               </IconButton>
