@@ -24,10 +24,17 @@ const StyledAppBar = styled(AppBar)(() => ({
 
 export const Header = () => {
   const [open, setOpen] = React.useState(false);
+
   const handleOpen = React.useCallback(() => setOpen(true), []);
   const handleClose = React.useCallback(() => setOpen(false), []);
 
-  const minutes = new Date().getMinutes();
+  const [time, setTime] = React.useState<{ minutes: number; hours: number }>(
+    {} as any
+  );
+
+  React.useEffect(() => {
+    setTime({ minutes: new Date().getMinutes(), hours: new Date().getHours() });
+  }, []);
 
   return (
     <>
@@ -62,11 +69,10 @@ export const Header = () => {
                 sx={{
                   mr: 2,
                   display: { md: 'flex' },
-
                   color: color.themeLightGray
                 }}>
-                last seen today at {new Date().getHours()}:
-                {minutes < 10 ? '0' + minutes : minutes}
+                last seen today at {time.hours}:
+                {time.minutes < 10 ? '0' + time.minutes : time.minutes}
               </Typography>
             </Box>
           </Toolbar>
