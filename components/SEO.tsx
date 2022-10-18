@@ -1,5 +1,5 @@
-import React from 'react';
-import { NextSeo } from 'next-seo';
+import React from "react";
+import { NextSeo } from "next-seo";
 
 interface Props {
   title?: string;
@@ -9,10 +9,10 @@ interface Props {
 
 function SEO({ title, description, urlPath }: Props) {
   const url = urlPath
-    ? process.env.NEXT_PUBLIC_URL + '/' + urlPath
+    ? process.env.NEXT_PUBLIC_URL + "/" + urlPath
     : process.env.NEXT_PUBLIC_URL;
   const Idescription = description || `template`;
-  const Ititle = title || 'Swpril Ahuja';
+  const Ititle = title || "Swpril Ahuja";
   return (
     <NextSeo
       title={Ititle}
@@ -24,24 +24,24 @@ function SEO({ title, description, urlPath }: Props) {
         description: Idescription,
         images: [
           {
-            url: '/assets/images/swpril.jpeg',
+            url: "/assets/images/swpril.jpeg",
             width: 800,
             height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/png'
+            alt: "Og Image Alt",
+            type: "image/png"
           }
         ],
-        site_name: 'Swpril Ahuja portfolio'
+        site_name: "Swpril Ahuja portfolio"
       }}
       twitter={{
-        handle: '@handle',
-        site: '@site',
-        cardType: 'summary_large_image'
+        handle: "@handle",
+        site: "@site",
+        cardType: "summary_large_image"
       }}
       additionalMetaTags={[
         {
-          name: 'viewport',
-          content: 'initial-scale=1, width=device-width'
+          name: "viewport",
+          content: "initial-scale=1, width=device-width"
         }
       ]}
     />

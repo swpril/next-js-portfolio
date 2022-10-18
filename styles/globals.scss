@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 html,
 body {
@@ -10,7 +10,7 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: Verdana, Tahoma, sans-serif;
+  font-family: Verdana, Tahoma, sans-serif !important;
 }
 
 body {

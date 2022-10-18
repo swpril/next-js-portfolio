@@ -1,10 +1,10 @@
-const ghpages = require('gh-pages');
+const ghpages = require("gh-pages");
 
 ghpages.publish(
-  'public',
+  "public",
   {
-    branch: 'master',
-    repo: 'https://github.com/swpril/swpril.github.io.git'
+    branch: "master",
+    repo: "https://github.com/swpril/swpril.github.io.git"
   },
-  () => console.log('Deploy Complete!')
+  () => console.log("Deploy Complete!")
 );
