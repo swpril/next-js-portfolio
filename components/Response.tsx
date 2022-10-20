@@ -1,11 +1,11 @@
-import React from "react";
-import { Box } from "@mui/material";
-import { Experience, Help, Home, Skills } from "./ResponseCards";
-import { AppResponseBox } from "./ResponseCards/Layouts/AppResponse";
+import React from 'react';
+import { Box } from '@mui/material';
+import { Experience, Help, Home, Skills } from './ResponseCards';
+import { AppResponseBox } from './ResponseCards/Layouts/AppResponse';
 
 const Response = ({ type }: { type: string }) => {
   return (
-    <Box sx={{ display: "flex", flexDirection: "column" }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column' }}>
       <AppResponseBox>
         <Home />
       </AppResponseBox>
@@ -13,10 +13,10 @@ const Response = ({ type }: { type: string }) => {
         <Help />
       </AppResponseBox>
       <AppResponseBox>
-        <Skills />
+        <Experience />
       </AppResponseBox>
       <AppResponseBox>
-        <Experience />
+        <Skills />
       </AppResponseBox>
     </Box>
   );

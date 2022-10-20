@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   AppBar,
   Box,
@@ -8,18 +8,18 @@ import {
   Container,
   Avatar,
   styled
-} from "@mui/material";
-import Image from "next/image";
+} from '@mui/material';
+import Image from 'next/image';
 
-import SwprilDP from "../assets/images/swpril.jpeg";
-import { color } from "../styles/color";
-import Modal from "./Modal";
+import SwprilDP from '../assets/images/swpril-compress.webp';
+import { color } from '../styles/color';
+import Modal from './Modal';
 
 const StyledAppBar = styled(AppBar)(() => ({
   background: color.themeGray,
-  color: "white",
-  display: "flex",
-  alignItems: "center"
+  color: 'white',
+  display: 'flex',
+  alignItems: 'center'
 }));
 
 const Header = () => {
@@ -53,15 +53,15 @@ const Header = () => {
 
   return (
     <>
-      <StyledAppBar position="sticky">
-        <Container maxWidth="xl">
+      <StyledAppBar position='sticky'>
+        <Container maxWidth='xl'>
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 0 }}>
               <IconButton sx={{ p: 0 }} onClick={handleOpen}>
                 <Avatar>
                   <Image
                     src={SwprilDP}
-                    alt="Swpril Ahuja profile picture"
+                    alt='Swpril Ahuja profile picture'
                     width={96}
                     height={120}
                   />
@@ -69,29 +69,27 @@ const Header = () => {
               </IconButton>
             </Box>
 
-            <Box className="mx-2">
+            <Box className='mx-2'>
               <Typography
-                variant="subtitle1"
+                variant='subtitle1'
                 noWrap
-                component="p"
-                sx={{ mr: 2, display: { md: "flex" }, lineHeight: "initial" }}
-              >
+                component='p'
+                sx={{ mr: 2, display: { md: 'flex' }, lineHeight: 'initial' }}>
                 Swpril Ahuja
               </Typography>
               <Typography
-                variant="caption"
+                variant='caption'
                 noWrap
-                component="p"
+                component='p'
                 sx={{
                   mr: 2,
-                  display: { md: "flex" },
+                  display: { md: 'flex' },
                   color: color.themeLightGray
-                }}
-              >
+                }}>
                 {isTyping
-                  ? "typing..."
+                  ? 'typing...'
                   : `last seen today at ${time.hours}:${
-                      time.minutes < 10 ? "0" + time.minutes : time.minutes
+                      time.minutes < 10 ? '0' + time.minutes : time.minutes
                     }`}
               </Typography>
             </Box>
